@@ -1,0 +1,16 @@
+.header{
+    height: var(--header-height);
+    width: 100vw;
+    background-color: black;
+    display: flex;
+}
+.left{
+    width: 20%;
+}
+.middle{
+    flex: 1;
+    background: blue;
+}
+.right{
+    width: 20%;
+}

@@ -1,0 +1,18 @@
+.main{
+    min-height: calc(100vh - var(--header-height));
+    flex: 1;
+    display: flex;
+    background-color: blueviolet;
+}
+.left{
+    width: 20%;
+    background-color: yellow;
+}
+.middle{
+    flex: 1;
+    background-color: pink;
+}
+.right{
+    width: 20%;
+    background-color: aqua;
+}
