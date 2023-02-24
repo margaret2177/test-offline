@@ -4,13 +4,13 @@ import Main from "./Main";
 import styles from "../styles/Layout.module.css";
 import Navigation from "./Navigation";
 
-const Layout = () => {
+const Layout = ({ data }) => {
   return (
     <div className={styles.layout}>
       <Header />
       <div className={styles.main}>
         <Navigation />
-        <Main />
+        <Main data={data} />
       </div>
     </div>
   );

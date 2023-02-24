@@ -3,7 +3,7 @@ import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import Layout from "@/components/Layout";
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <>
       <Head>
@@ -12,7 +12,19 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout />
+      <Layout data={data} />
     </>
   );
 }
+
+export const getStaticProps = async (context) => {
+  const data = await fetch("http://localhost:3000/api/test").then((res) =>
+    res.json()
+  );
+  console.log(data);
+  return {
+    props: {
+      data,
+    },
+  };
+};
