@@ -8,7 +8,7 @@ const Main = ({ data: datas }) => {
       <div className={styles.left}>left</div>
       <div className={styles.middle}>
         {datas?.map((d, i) => (
-          <h1 key={i}>{d.name}</h1>
+          <h1 key={i}>{d.title}</h1>
         ))}
       </div>
       <div className={styles.right}>right</div>
