@@ -7,7 +7,7 @@ const Main = ({ data: datas }) => {
     <div className={styles.main}>
       <div className={styles.left}>left</div>
       <div className={styles.middle}>
-        {datas.data?.map((d, i) => (
+        {datas?.map((d, i) => (
           <h1 key={i}>{d.name}</h1>
         ))}
       </div>
