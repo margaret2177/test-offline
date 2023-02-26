@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import styles from "@/styles/Home.module.css";
 import Layout from "@/components/Layout";
+import axios from "axios";
 
 export default function Home({ data }) {
   return (
@@ -18,9 +19,10 @@ export default function Home({ data }) {
 }
 
 export const getStaticProps = async (context) => {
-  const data = await fetch("http://localhost:3000/api/test").then((res) =>
-    res.json()
-  );
+  const { data } = await axios({
+    method: "get",
+    url: "http://localhost:3000/api/test",
+  });
   console.log(data);
   return {
     props: {
