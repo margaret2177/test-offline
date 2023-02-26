@@ -18,7 +18,7 @@ export default function Home({ data }) {
   );
 }
 
-export const getStaticProps = async (context) => {
+export const getServerSideProps = async (context) => {
   const { data } = await axios({
     method: "get",
     url: "http://localhost:3000/api/test",
